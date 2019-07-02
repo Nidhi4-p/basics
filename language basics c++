@@ -1,0 +1,190 @@
+c++
+===
+
+#include <iostream.h>
+using namespace std;
+int main()
+{
+    cout << "Hello this is C++";
+}
+
+Comments in C++ Program
+-----------------------
+// This is single line comment
+
+For multiple line comment, enclose the comment between /* and */
+
+/*this is 
+  a multiple line 
+  comment */
+  
+  
+Creating Classes in C++
+------------------------
+class Abc
+{
+    int i;           //data variable
+    void display()         //Member Function
+    { 
+        cout << "Inside Member Function";
+    }
+}; // Class ends here
+
+int main()
+{
+    Abc obj;  // Creatig Abc class's object
+    obj.display();  //Calling member function using class object
+}
+
+
+Enum as Datatype in C++
+-----------------------
+Enumerated type declares a new type-name along with a sequence of values containing identifiers which has values 
+starting from 0 and incrementing by 1 every time.
+
+For Example:
+
+enum day(mon, tues, wed, thurs, fri) d;
+
+Here an enumeration of days is defined which is represented by the variable d. 
+mon will hold value 0, tue will have 1 and so on. We can also explicitly 
+assign values, like, enum day(mon, tue=7, wed);. Here, mon will be 0, tue will be assigned 7, so wed will get value 8.
+
+
+
+Modifiers in C++
+----------------
+    long
+    short
+    signed
+    unsigned
+
+Some special types of variable
+------------------------------
+
+
+    Final - Once initialized, its value cant be changed.
+    Static - These variables holds their value between function calls.
+
+
+
+if-else statement in c++
+------------------------
+else if is used in cpp
+
+
+else if(expression 2) 
+{
+    statement-block2;
+}
+
+
+ 3 type of loops in C++ language
+ -------------------------------
+ unlike python,no need of colon after loop for "for" & "while"
+    1.while loop
+    2.for loop
+    3.do-while loop
+          do
+          {
+            // a couple of statements
+          }
+          while(condition);
+          
+        
+        
+ Storage Classes in C++
+ ----------------------
+ 
+ 
+    Global variables
+    Local variables(They are defined and are available within a particular scope. They are also called Automatic variable)
+    Register variables(This keyword is used to tell the compiler to make access to this variable as fast as possible. Variables are stored in registers to increase the access speed)
+    Static variables(Static variables are the variables which are initialized & allocated storage only once at the beginning of program execution, no matter how many times they are used and called in the program.)
+    Extern variables(This keyword is used to access variable in a file which is declared & defined in some other file)
+    
+    
+ Basic Syntax for using Functions in C++
+ ---------------------------------------
+ 
+ return-type function-name(parameter1, parameter2, ...)
+{
+    // function-body
+}
+
+eg:
+
+//declaring the function
+int sum (int x, int y);
+
+int main()
+{
+    int a = 10;
+    int b = 20;
+    int c = sum (a, b);    //calling the function
+    cout << c;
+}
+
+//defining the function
+int sum (int x, int y)
+{
+    return (x + y);
+    
+}
+
+
+Calling a Function
+------------------
+
+    Call by Value
+    Call by Reference
+
+simple example for each:
+
+Call by Value
+-------------
+
+void calc(int x);
+
+int main()
+{
+    int x = 10;
+    calc(x);
+    printf("%d", x);
+}
+
+void calc(int x)
+{
+    x = x + 10 ;
+}
+
+output:
+10
+
+
+Call by Reference
+-----------------
+
+void calc(int *p);
+
+int main()
+{
+    int x = 10;
+    calc(&x);     // passing address of x as argument
+    printf("%d", x);
+}
+
+void calc(int *p)
+{
+    *p = *p + 10;
+}
+
+output:
+20
+
+
+
+
+
+  
+
